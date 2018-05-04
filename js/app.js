@@ -53,16 +53,16 @@ function printList(){
 
         var li = "<li>";
         li += "<div class='date-label'>"+d.date;
-        if(d.title) li += " - <span class='dead-title'>"+d.title+"</span>";
+        if(d.title) li += " - <span class='dead-title' onclick='edit("+key+",\"title\")'>"+d.title+"</span>";
         li += "<button class='remove-one' onclick='removeOne("+key+")'>x</span></button></div>";
-        li += txtDiff;
+        li += "<span class='edit-date' onclick='edit("+key+",\"date\")'>"+txtDiff+"</span>";
         li += "</li>";
 
         list.innerHTML += li;
     }
 }
 printList();
-setInterval(printList, 1000);
+//setInterval(printList, 1000);
 
 function clearDeadLines(){
     if(confirm('Είσαι σίγουρος ?')){
@@ -76,4 +76,14 @@ function removeOne(key){
     datesArray.splice(key,1);
     updateStorage();
     printList();
+}
+
+function edit(key,type){
+    var val = datesArray[key][type];
+    var newVal = prompt("Change it:", val);
+    if(newVal){
+        datesArray[key][type] = newVal;
+        updateStorage();
+        printList();
+    }
 }
