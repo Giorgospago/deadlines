@@ -47,15 +47,14 @@ function printList(){
         var d = datesArray[key];
         var txtDiff = getDiff(d.date);
         if(!txtDiff){
-            datesArray.splice(key,1);
-            updateStorage();
+            removeOne(key);
             continue;
         }
 
         var li = "<li>";
         li += "<div class='date-label'>"+d.date;
         if(d.title) li += " - <span class='dead-title'>"+d.title+"</span>";
-        li += "</div>";
+        li += "<button class='remove-one' onclick='removeOne("+key+")'>x</span></button></div>";
         li += txtDiff;
         li += "</li>";
 
@@ -65,11 +64,16 @@ function printList(){
 printList();
 setInterval(printList, 1000);
 
-
 function clearDeadLines(){
     if(confirm('Είσαι σίγουρος ?')){
         datesArray = [];
         updateStorage();
         printList();
     }
+}
+
+function removeOne(key){
+    datesArray.splice(key,1);
+    updateStorage();
+    printList();
 }

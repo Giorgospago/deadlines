@@ -107,3 +107,20 @@ html,body{
 #clear:active{
     background-color: #000;
 }
+.remove-one{
+    float: right;
+    border-radius: 100%;
+    border: none;
+    background-color: darkred;
+    color: #fff;
+    margin: -3px -10px 0 0;
+    width: 20px;
+    height: 20px;
+    line-height: 0;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 10px;
+    padding-bottom: 1px;
+    text-align: center;
+    cursor: pointer;
+}
