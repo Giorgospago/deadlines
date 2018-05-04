@@ -62,7 +62,7 @@ function printList(){
     }
 }
 printList();
-//setInterval(printList, 1000);
+setInterval(printList, 1000);
 
 function clearDeadLines(){
     if(confirm('Είσαι σίγουρος ?')){
