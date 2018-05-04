@@ -2,6 +2,9 @@
     font-family: 'deathblood';
     src:  url('deathbloodital.ttf');
 }
+*{
+    outline:none;
+}
 html{
     height:100%;
     background-image: url("../img/cemetary.png");
@@ -13,6 +16,7 @@ html,body{
     font-family: 'Concert One', cursive;
     margin:0;
     padding:0;
+    text-align: center;
 }
 .death{
     font-family: 'deathblood';
@@ -20,7 +24,7 @@ html,body{
 .logo{
     color: #fff;
     text-align: center;
-    font-size: 70px;
+    font-size: 100px;
     letter-spacing: 3px;
     font-weight: normal;
     margin: 20px 0 0 0;
@@ -30,22 +34,76 @@ html,body{
 #form, #timer{
     display:inline-block;
     vertical-align: top;
-    margin:20px;
+    margin:20px 10px;
 }
 #form{
     background-color: rgba(255,255,255,0.7);
+    box-shadow: 0px 4px 28px 0px black;
     border-radius:5px;
     padding:10px;
 }
 #timer{
     list-style: none;
+    padding:0;
+    width:100%;
+    max-width:700px;
 }
 #timer li{
     background-color: rgba(255,255,255,0.7);
     padding: 10px 20px 25px;
-    font-size:40px;
+    font-size:50px;
     border-radius:5px;
+    margin-bottom:25px;
+    box-shadow: 0px 4px 28px 0px black;
 }
 #timer li div.date-label{
     font-size:12px;
+    text-align: left;
+}
+.dead-title{
+    color:crimson;
+}
+
+#form-title{
+    width: calc(100% - 20px - 6px);
+    padding: 12px 10px;
+    border: solid 3px grey;
+    border-radius: 8px 8px 0px 0px;
+    border-bottom: none;
+}
+#form-date{
+    width: calc(100% - 20px - 6px);
+    padding: 10px;
+    border: solid 3px grey;
+    border-radius: 0px 0px 8px 8px;
+}
+#add{
+    width: calc(100%);
+    border: solid 3px darkred;
+    background-color: crimson;
+    color: #fff;
+    border-radius: 8px;
+    padding: 5px 0px;
+    font-size: 25px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+#add:active{
+    background-color: darkred;
+}
+#clear{
+    width: calc(100%);
+    border: none;
+    background-color: #606060;
+    color: #fff;
+    border-radius: 8px;
+    padding: 5px 0px;
+    margin: 0;
+    cursor: pointer;
+}
+#clear:hover{
+    background-color: #202020;
+}
+#clear:active{
+    background-color: #000;
 }

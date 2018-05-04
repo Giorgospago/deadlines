@@ -5,16 +5,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
+        <title>DEADLINES</title>
     </head>
     <body>
         <h1 class="logo death">DEADLINES</h1>
 
         <div id="form">
+            <input type="title" id="form-title" placeholder="Some title.."/>
+            <br/>
             <input type="date" id="form-date"/>
-            <button onclick="addDate()">Add Date</button>
-            <div>
-                <button>clear deadlines</button>
-            </div>
+            <br/>
+            <button onclick="addDate()" id="add">ADD</button>
+            <br/>
+            <button id="clear" onclick="clearDeadLines()">clear deadlines</button>
         </div>
         <ul id="timer"></ul>
         <script src="js/app.js"></script>
