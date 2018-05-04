@@ -45,7 +45,7 @@ function printList(){
     list.innerHTML = "";
     for(var key in datesArray){
         var d = datesArray[key];
-        var txtDiff = getDiff(d.date);
+        var txtDiff = getDiff(d.date+" 12:00:00");
         if(!txtDiff){
             removeOne(key);
             continue;
